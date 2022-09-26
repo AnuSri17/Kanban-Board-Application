@@ -8,5 +8,6 @@ import com.kanbanboard.entity.ContactDTO;
 
 public interface ContactService {
 	public Contact createContact(ContactDTO contactDTO);
-	public List<Contact> showAllContact();
+	
+	public List<Contact> showAllContacts();
 }

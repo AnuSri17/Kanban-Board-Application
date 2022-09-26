@@ -17,7 +17,7 @@
                             <div class="form-group">
                                 <label for="userName">UserName</label>
                                 <input [(ngModel)]="contact.userName" type="text" id="userName" class="form-control"
-                                    formControlName="userName" placeholder="Enter Username">
+                                    formControlName="userName" placeholder="Enter Username" autocomplete="off">
                                 <div class="form-text text-danger"
                                     *ngIf="UserName.errors?.['required'] && (UserName.touched  || UserName.dirty)">
                                     First Name is Required. </div>
@@ -34,8 +34,8 @@
 
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input type="email" id="email" class="form-control" formControlName="email"
-                                    placeholder="Enter email">
+                                <input [(ngModel)]="contact.email" type="email" id="email" class="form-control" formControlName="email"
+                                    placeholder="Enter email" autocomplete="off">
                                 <div class="form-text text-danger"
                                     *ngIf="Email.errors?.['required'] && (Email.touched  || Email.dirty)"> Email is
                                     Required. </div>
@@ -46,8 +46,8 @@
 
                             <div class="form-group">
                                 <label for="phoneNo">Phone Number</label>
-                                <input type="text" id="phoneNo" class="form-control" formControlName="phoneNo"
-                                    placeholder="Enter phone number">
+                                <input [(ngModel)]="contact.phoneNo" type="text" id="phoneNo" class="form-control" formControlName="phoneNo"
+                                    placeholder="Enter phone number" autocomplete="off">
                                 <div class="form-text text-danger"
                                     *ngIf="PhoneNo.errors?.['required'] && (PhoneNo.touched  || PhoneNo.dirty)"> Email
                                     is Required. </div>
@@ -58,7 +58,7 @@
 
                             <div class="form-group">
                                 <label for="message">Message</label>
-                                <textarea id="message" class="form-control" rows="3" formControlName="message"
+                                <textarea [(ngModel)]="contact.message" id="message" class="form-control" rows="3" formControlName="message"
                                     placeholder="Enter your message"></textarea>
                                 <div class="form-text text-danger"
                                     *ngIf="Message.errors?.['required'] && (Message.touched  || Message.dirty)">

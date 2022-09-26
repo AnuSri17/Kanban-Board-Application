@@ -36,7 +36,7 @@ public class ContactController {
 	}
 	
 	@GetMapping("/getContacts")
-	public List<Contact> showAllContact(){
+	public List<Contact> showAllContacts(){
 		List<Contact> data = contactRepo.findAll();
 		return data;
 	}

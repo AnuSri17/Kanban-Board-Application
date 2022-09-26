@@ -32,11 +32,10 @@ public class ContactServiceImpl implements ContactService {
 	}
 
 	@Override
-	public List<Contact> showAllContact() {
+	public List<Contact> showAllContacts() {
 
 		return this.contactUsRepo.findAll(Sort.by(Sort.Direction.ASC,"contactId"));
 	}
-
 
 	
 }
